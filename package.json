@@ -1,0 +1,14 @@
+{
+  "name": "lukasz-kowalski-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Lukasz Kowalski",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o public/css/ --recursive"
+  },
+  "author": "Lukasz Kowalski",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
