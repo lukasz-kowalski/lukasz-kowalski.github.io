@@ -4,11 +4,13 @@
   "description": "Portfolio of Lukasz Kowalski",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o public/css/ --recursive"
+    "sass": "node-sass -w scss/ -o public/css/ --recursive",
+    "server": "live-server --port=3000 --entry-file=index.html"
   },
   "author": "Lukasz Kowalski",
   "license": "MIT",
   "dependencies": {
+    "live-server": "^1.2.0",
     "node-sass": "^4.9.3"
   }
 }
