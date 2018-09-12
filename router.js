@@ -9,7 +9,11 @@ const routes = {
 };
 
 window.onpopstate = () => {
-  main.innerHTML = routes[window.location.pathname];
+  if (!routes[window.location.pathname]) {
+    main.innerHTML = page404
+  } else {
+    main.innerHTML = routes[window.location.pathname];
+  }
 }
 
 let onNavItemClick = (pathName) => {
@@ -21,5 +25,8 @@ if (!routes[window.location.pathname]) {
   main.innerHTML = page404
 } else {
   main.innerHTML = routes[window.location.pathname];
+  if (window.location.pathname === '/') {
+    document.body.classList.add('bg-home');
+  }
 }
 

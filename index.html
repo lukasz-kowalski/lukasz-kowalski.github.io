@@ -6,17 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Portfolio of Lukasz Kowalski</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="/public/css/main.css" />
 </head>
 
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/bio">Bio</a></li>
-        <li><a href="/work">Work</a></li>
-        <li><a href="/contact">Contact</a></li>
+      <div class="portrait-container">
+        <div class="menu-portrait"></div>
+      </div>
+      <ul class="links-container">
+        <li class="menu-item"><a href="/" class="menu-link">Home</a></li>
+        <li class="menu-item"><a href="/bio" class="menu-link">Bio</a></li>
+        <li class="menu-item"><a href="/work" class="menu-link">Work</a></li>
+        <li class="menu-item"><a href="/contact" class="menu-link">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -30,5 +34,6 @@
   <script src="public/pages/contact.js"></script>
   <script src="public/pages/404.js"></script>
   <script src="router.js"></script>
+  <script src="/public/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 10px;
+  color: #fff; }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  background: #333;
+  overflow: hidden; }
+  body.bg-home {
+    background-image: url(/public/img/home-background.jpg);
+    background-size: cover;
+    background-attachment: fixed; }
+    body.bg-home:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(51, 51, 51, 0.9); }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0; }
+
+main {
+  min-height: 100vh; }
+  main .home {
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 20vh;
+    padding: 2rem; }
+    main .home .large-header {
+      font-size: 6rem;
+      transform: translate(0, -100vh);
+      transition: all 1s ease-out; }
+      main .home .large-header.show {
+        transform: translate(0, 0); }
+    main .home .small-header {
+      font-size: 2.5rem;
+      background: rgba(64, 64, 64, 0.6);
+      padding: 1rem;
+      display: inline-block;
+      transform: translate(0, 200vh);
+      transition: all 1s ease-out; }
+      main .home .small-header.show {
+        transform: translate(0, 0); }
+    main .home .home-icons {
+      transform: translate(-100vw, 0);
+      transition: all 1s ease-out; }
+      main .home .home-icons.show {
+        transform: translate(0, 0); }
+      main .home .home-icons a {
+        padding: 1rem; }
+        main .home .home-icons a:hover {
+          color: #DD4124; }
+
+h1, h2, h3 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: 1.5px; }
+
+.highlighted-text {
+  color: #DD4124; }
+
+@media screen and (min-width: 768px) {
+  main .home {
+    margin-top: 12.5vh;
+    text-align: left;
+    padding: 15rem; }
+    main .home .small-header {
+      font-size: 3rem; }
+  h1, h2, h3 {
+    margin-bottom: 3rem; } }
+
+@media screen and (min-width: 1025px) {
+  main .home {
+    margin-top: 10vh; }
+    main .home .large-header {
+      font-size: 8rem; }
+    main .home .small-header {
+      font-size: 3.5rem; } }

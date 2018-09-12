@@ -1,1 +1,96 @@
-$primary-color: #444;
+@import 'variables';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  color: $font-color;
+}
+
+body {
+  @include background-image;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  background: $bg-color;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+main {
+  min-height: 100vh;
+
+  .home {
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 20vh;
+    padding: 2rem;
+
+    .large-header {
+      font-size: 6rem;
+      transform: translate(0, -100vh);
+      @include ease-out(1s);
+
+      &.show {
+        transform: translate(0, 0);
+      }
+    }
+
+    .small-header {
+      font-size: 2.5rem;
+      background: rgba(lighten($bg-color, 5%), 0.6);
+      padding: 1rem;
+      display: inline-block;
+      transform: translate(0, 200vh);
+      @include ease-out(1s);
+
+      &.show {
+        transform: translate(0, 0);
+      }
+    }
+
+    .home-icons {
+      transform: translate(-100vw, 0);
+      @include ease-out(1s);
+
+      &.show {
+        transform: translate(0, 0);
+      }
+      a {
+        padding: 1rem;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.highlighted-text {
+  color: $primary-color;
+}
+
+@import 'media-queries';

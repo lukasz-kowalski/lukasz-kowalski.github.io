@@ -1,0 +1,34 @@
+@mixin background-image {
+  &.bg-home {
+    background-image: $bg-img;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba($bg-color, $bg-opacity);
+    }
+  }
+}
+
+@mixin ease-out($duration) {
+  transition: all $duration ease-out;
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}

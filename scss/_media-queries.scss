@@ -1,0 +1,33 @@
+@include tablet {
+  main {
+    .home {
+      margin-top: 12.5vh;
+      text-align: left;
+      padding: 15rem;
+  
+      .small-header {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 3rem;
+  }
+}
+
+@include desktop {
+  main {
+    .home {
+      margin-top: 10vh;
+
+      .large-header {
+        font-size: 8rem;
+      }
+  
+      .small-header {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
