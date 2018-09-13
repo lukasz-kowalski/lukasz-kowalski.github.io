@@ -1,4 +1,23 @@
 @include tablet {
+  .menu-hamburger {
+    top: 2.5rem;
+    right: 2.5rem;
+
+    .menu-line {
+      width: 3.5rem;
+      background: $font-color;
+    }
+
+    &.close {
+      .menu-line {
+        &:nth-child(2) {
+          top: -2.4rem;
+          right: -1.1rem;
+        }
+      }
+    }
+  }
+
   main {
     .home {
       margin-top: 12.5vh;
@@ -17,6 +36,11 @@
 }
 
 @include desktop {
+  .menu-hamburger {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+
   main {
     .home {
       margin-top: 10vh;

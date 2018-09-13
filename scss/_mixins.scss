@@ -4,15 +4,15 @@
     background-size: cover;
     background-attachment: fixed;
 
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
       background: rgba($bg-color, $bg-opacity);
+      z-index: -1;
     }
   }
 }
