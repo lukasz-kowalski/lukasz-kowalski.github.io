@@ -51,55 +51,40 @@ nav {
   }
 
   .portrait-container, .links-container {
-    width: 50%;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left;
+    overflow: hidden;
   }
 
   .portrait-container {
     @include ease-out(1s);
-    background: rgba($bg-color, 0.5);
-    transform: translate(-100vw, 0);
+    background: rgba($bg-color, 0.6);
+    transform: translate(0, -100vh);
+    height: 30vh;
 
     &.show {
       transform: translate(0, 0);
     }
 
     .menu-portrait {
-      width: 25rem;
-      height: 25rem;
+      width: 15rem;
+      height: 15rem;
       background: url('/public/img/portrait.jpg');
       background-size: cover;
       border-radius: 50%;
       border: 0.3rem solid $primary-color;
-
-      &::after {
-        content: '';
-        @include ease-out(0.5s);
-        background: rgba(darken($bg-color, 5), 0.6);
-        z-index: 5;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: block;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      &:hover::after {
-        opacity: 0;
-      }
     }
   }
 
   .links-container {
     @include ease-out(1s);
-    background: rgba(darken($bg-color, 5), 0.6);
-    transform: translate(100vw, 0);
+    background: rgba(darken($bg-color, 5), 0.8);
+    height: 70vh;
+    text-transform: uppercase;
+    transform: translate(0, 100vh);
 
     &.show {
       transform: translate(0,0);
@@ -107,6 +92,8 @@ nav {
 
     .menu-item {
       @include ease-out(2s);
+      font-size: 4rem;
+      padding: 1rem;
       list-style-type: none;
       opacity: 0;
 

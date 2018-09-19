@@ -14,6 +14,7 @@ let showMenu = false;
 const toggleMenu = () => {
   if (!showMenu) {
     hamburger.classList.add('close');
+    hamburger.classList.remove('show');
     nav.classList.add('show');
     portrait.classList.add('show');
     linksContainer.classList.add('show');
@@ -24,6 +25,7 @@ const toggleMenu = () => {
     showMenu = true;
   } else {
     hamburger.classList.remove('close');
+    hamburger.classList.add('show');
     nav.classList.remove('show');
     portrait.classList.remove('show');
     linksContainer.classList.remove('show');

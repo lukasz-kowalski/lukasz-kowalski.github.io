@@ -77,6 +77,7 @@ main {
         padding: 1rem;
 
         &:hover {
+          @include ease-out(0.5s);
           color: $primary-color;
         }
       }

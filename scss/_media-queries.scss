@@ -4,17 +4,46 @@
     right: 2.5rem;
 
     .menu-line {
-      width: 3.5rem;
+      width: 5rem;
       background: $font-color;
     }
 
     &.close {
       .menu-line {
         &:nth-child(2) {
-          top: -2.4rem;
-          right: -1.1rem;
+          top: -3.5rem;
+          right: -1.25rem;
+          width: 7rem;
+          height: 7rem;
         }
       }
+    }
+
+    &.show {
+      .menu-line {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  nav {
+    .portrait-container, .links-container {
+      width: 50%;
+      height: 100vh;
+      float: left;
+    }
+
+    .portrait-container {
+      transform: translate(-100vw, 0);
+
+      .menu-portrait {
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+
+    .links-container {
+      transform: translate(100vw, 0);
     }
   }
 
@@ -39,6 +68,41 @@
   .menu-hamburger {
     top: 3.5rem;
     right: 3.5rem;
+
+    &:hover .menu-line {
+      background: $primary-color;
+    }
+  }
+
+  nav {
+    .portrait-container {
+      .menu-portrait {
+        &::after {
+          content: '';
+          @include ease-out(0.5s);
+          background: rgba(darken($bg-color, 5), 0.4);
+          z-index: 5;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: block;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+  
+        &:hover::after {
+          opacity: 0;
+        }
+      }
+    }
+    .links-container {
+      .menu-item {
+        .menu-link:hover {
+          @include ease-out(0.5s);
+          color: $primary-color;
+        }
+      }
+    }
   }
 
   main {

@@ -36,47 +36,38 @@ nav {
   nav.show {
     visibility: visible; }
   nav .portrait-container, nav .links-container {
-    width: 50%;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left; }
+    overflow: hidden; }
   nav .portrait-container {
     transition: all 1s ease-out;
-    background: rgba(51, 51, 51, 0.5);
-    transform: translate(-100vw, 0); }
+    background: rgba(51, 51, 51, 0.6);
+    transform: translate(0, -100vh);
+    height: 30vh; }
     nav .portrait-container.show {
       transform: translate(0, 0); }
     nav .portrait-container .menu-portrait {
-      width: 25rem;
-      height: 25rem;
+      width: 15rem;
+      height: 15rem;
       background: url("/public/img/portrait.jpg");
       background-size: cover;
       border-radius: 50%;
       border: 0.3rem solid #DD4124; }
-      nav .portrait-container .menu-portrait::after {
-        content: '';
-        transition: all 0.5s ease-out;
-        background: rgba(38, 38, 38, 0.6);
-        z-index: 5;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: block;
-        border-radius: 50%;
-        cursor: pointer; }
-      nav .portrait-container .menu-portrait:hover::after {
-        opacity: 0; }
   nav .links-container {
     transition: all 1s ease-out;
-    background: rgba(38, 38, 38, 0.6);
-    transform: translate(100vw, 0); }
+    background: rgba(38, 38, 38, 0.8);
+    height: 70vh;
+    text-transform: uppercase;
+    transform: translate(0, 100vh); }
     nav .links-container.show {
       transform: translate(0, 0); }
     nav .links-container .menu-item {
       transition: all 2s ease-out;
+      font-size: 4rem;
+      padding: 1rem;
       list-style-type: none;
       opacity: 0; }
       nav .links-container .menu-item.show {
@@ -151,6 +142,7 @@ main {
       main .home .home-icons a {
         padding: 1rem; }
         main .home .home-icons a:hover {
+          transition: all 0.5s ease-out;
           color: #DD4124; }
 
 h1, h2, h3 {
@@ -166,11 +158,26 @@ h1, h2, h3 {
     top: 2.5rem;
     right: 2.5rem; }
     .menu-hamburger .menu-line {
-      width: 3.5rem;
+      width: 5rem;
       background: #fff; }
     .menu-hamburger.close .menu-line:nth-child(2) {
-      top: -2.4rem;
-      right: -1.1rem; }
+      top: -3.5rem;
+      right: -1.25rem;
+      width: 7rem;
+      height: 7rem; }
+    .menu-hamburger.show .menu-line {
+      margin-bottom: 0.8rem; }
+  nav .portrait-container, nav .links-container {
+    width: 50%;
+    height: 100vh;
+    float: left; }
+  nav .portrait-container {
+    transform: translate(-100vw, 0); }
+    nav .portrait-container .menu-portrait {
+      width: 25rem;
+      height: 25rem; }
+  nav .links-container {
+    transform: translate(100vw, 0); }
   main .home {
     margin-top: 12.5vh;
     text-align: left;
@@ -184,6 +191,24 @@ h1, h2, h3 {
   .menu-hamburger {
     top: 3.5rem;
     right: 3.5rem; }
+    .menu-hamburger:hover .menu-line {
+      background: #DD4124; }
+  nav .portrait-container .menu-portrait::after {
+    content: '';
+    transition: all 0.5s ease-out;
+    background: rgba(38, 38, 38, 0.4);
+    z-index: 5;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer; }
+  nav .portrait-container .menu-portrait:hover::after {
+    opacity: 0; }
+  nav .links-container .menu-item .menu-link:hover {
+    transition: all 0.5s ease-out;
+    color: #DD4124; }
   main .home {
     margin-top: 10vh; }
     main .home .large-header {
