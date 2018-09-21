@@ -21,6 +21,18 @@
   transition: all $duration ease-out;
 }
 
+@mixin center-text {
+  text-align: center;
+}
+
+@mixin full-width {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 @mixin tablet {
   @media screen and (min-width: 768px) {
     @content;

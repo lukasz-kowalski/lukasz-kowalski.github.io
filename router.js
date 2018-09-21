@@ -27,6 +27,7 @@ if (!routes[window.location.pathname]) {
   main.innerHTML = routes[window.location.pathname];
   if (window.location.pathname === '/') {
     document.body.classList.add('bg-home');
+    document.body.style.overflow = 'hidden';
   }
 }
 

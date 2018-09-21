@@ -11,8 +11,14 @@ const menuLinks = document.querySelectorAll('.menu-item');
 
 let showMenu = false;
 
+const getScrollbarWidth = () => `${window.innerWidth - document.documentElement.clientWidth}px`;
+
 const toggleMenu = () => {
   if (!showMenu) {
+    const scrollWidth = getScrollbarWidth();
+    console.log(scrollWidth)
+    document.body.classList.add('block-overflow');
+    document.body.style.paddingRight = scrollWidth;
     hamburger.classList.add('close');
     hamburger.classList.remove('show');
     nav.classList.add('show');
@@ -24,6 +30,8 @@ const toggleMenu = () => {
 
     showMenu = true;
   } else {
+    document.body.classList.remove('block-overflow');
+    document.body.style.paddingRight = '';
     hamburger.classList.remove('close');
     hamburger.classList.add('show');
     nav.classList.remove('show');
