@@ -18,8 +18,8 @@ window.onpopstate = () => {
 
 const onNavItemClick = event => {
   if (!event.target.classList.contains('menu-link')) return;
-  window.history.pushState({}, event.target.pathname, event.target.pathname);
-  main.innerHTML = routes[pathName];
+  window.history.pushState({}, event.target.id, event.target.id);
+  main.innerHTML = routes[event.target.id];
 }
 
 if (!routes[window.location.pathname]) {
