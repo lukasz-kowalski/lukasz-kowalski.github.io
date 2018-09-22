@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'menu';
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
   box-sizing: border-box;
@@ -17,13 +17,9 @@ html {
 body {
   @include background-image;
   font-size: 1.6rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: $bg-color;
   overflow-x: hidden;
-}
-
-.block-overflow {
-  overflow: hidden;
 }
 
 a {
@@ -127,11 +123,9 @@ main {
     grid-gap: 2rem 1rem;
 
     .work__project {
-
       .project__figure {
         position: relative;
         border: 0.2rem solid $font-color;
-
 
         .caption {
           position: absolute;
@@ -147,10 +141,8 @@ main {
     }
       .github-button {
         width: 100%;
-        display: flex;
+        @include display-flex(center, center);
         margin-top: 0.5rem;
-        justify-content: center;
-        align-items: center;
         background: $bg-color;
         color: $font-color;
         text-transform: uppercase;
@@ -228,9 +220,8 @@ main {
     }
 
     .contact-item {
-      display: flex;
+      @include display-flex(center);
       flex-direction: column;
-      align-items: center;
       margin: 1rem auto 2rem auto;
 
       .round-background {
@@ -238,9 +229,7 @@ main {
         width: 6rem;
         background: lighten($bg-color, 10%);
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display-flex(center, center);
 
         i:hover {
           @include ease-out(0.5s);

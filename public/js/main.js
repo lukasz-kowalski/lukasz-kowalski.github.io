@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", event => {
   const arr = [document.querySelector('.large-header'), document.querySelector('.small-header'), document.querySelector('.home-icons')];
-  setTimeout(() => arr.forEach(header => header.classList.add('show'), 1000));
+  setTimeout(() => arr.forEach(header => header.classList.add('show'), 500));
 });
 
 const hamburger = document.querySelector('.menu-hamburger');
@@ -9,40 +9,19 @@ const portrait = document.querySelector('.portrait-container');
 const linksContainer = document.querySelector('.links-container');
 const menuLinks = document.querySelectorAll('.menu-item');
 
-let showMenu = false;
-
 const getScrollbarWidth = () => `${window.innerWidth - document.documentElement.clientWidth}px`;
 
 const toggleMenu = () => {
-  if (!showMenu) {
     const scrollWidth = getScrollbarWidth();
-    console.log(scrollWidth)
-    document.body.classList.add('block-overflow');
     document.body.style.paddingRight = scrollWidth;
-    hamburger.classList.add('close');
-    hamburger.classList.remove('show');
-    nav.classList.add('show');
-    portrait.classList.add('show');
-    linksContainer.classList.add('show');
+    hamburger.classList.toggle('close');
+    hamburger.classList.toggle('show');
+    nav.classList.toggle('show');
+    portrait.classList.toggle('show');
+    linksContainer.classList.toggle('show');
     for (let link of menuLinks) {
-      link.classList.add('show');
+      link.classList.toggle('show');
     }
-
-    showMenu = true;
-  } else {
-    document.body.classList.remove('block-overflow');
-    document.body.style.paddingRight = '';
-    hamburger.classList.remove('close');
-    hamburger.classList.add('show');
-    nav.classList.remove('show');
-    portrait.classList.remove('show');
-    linksContainer.classList.remove('show');
-    for (let link of menuLinks) {
-      link.classList.remove('show');
-    }
-
-    showMenu = false;
-  }
 }
 
 hamburger.addEventListener('click', toggleMenu);

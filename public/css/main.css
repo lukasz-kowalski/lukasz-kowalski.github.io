@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 .menu-hamburger {
   transition: all 1s ease-out;
   position: absolute;
@@ -40,9 +40,9 @@ nav {
   nav .portrait-container, nav .links-container {
     width: 100%;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
     overflow: hidden; }
   nav .portrait-container {
     transition: all 1s ease-out;
@@ -90,7 +90,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #333;
   overflow-x: hidden; }
   body.bg-home {
@@ -106,9 +106,6 @@ body {
       height: 100%;
       background: rgba(51, 51, 51, 0.9);
       z-index: -1; }
-
-.block-overflow {
-  overflow: hidden; }
 
 a {
   text-decoration: none;
@@ -194,9 +191,9 @@ main {
     main .work__container .github-button {
       width: 100%;
       display: flex;
-      margin-top: 0.5rem;
       justify-content: center;
       align-items: center;
+      margin-top: 0.5rem;
       background: #333;
       color: #fff;
       text-transform: uppercase;
@@ -260,8 +257,9 @@ main {
       margin-right: -50vw; }
   main .contact .contact-item {
     display: flex;
-    flex-direction: column;
+    justify-content: normal;
     align-items: center;
+    flex-direction: column;
     margin: 1rem auto 2rem auto; }
     main .contact .contact-item .round-background {
       height: 6rem;

@@ -56,10 +56,8 @@ nav {
 
   .portrait-container, .links-container {
     width: 100%;
-    display: flex;
+    @include display-flex(center, center);
     flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
   }
 
