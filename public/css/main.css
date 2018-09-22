@@ -24,8 +24,8 @@
       border: 0.3rem solid #fff;
       height: 5rem;
       width: 5rem;
-      top: -2.4rem;
-      right: -1.4rem;
+      top: -2.6rem;
+      right: -1.35rem;
       border-radius: 7.5rem; }
     .menu-hamburger.close .menu-line:nth-child(3) {
       transform: rotate(-45deg) translate(1rem, -0.7rem); }
@@ -294,9 +294,11 @@ h1, h2, h3 {
       background: #fff; }
     .menu-hamburger.close .menu-line:nth-child(2) {
       top: -3.5rem;
-      right: -1.25rem;
+      right: -1.15rem;
       width: 7rem;
       height: 7rem; }
+    .menu-hamburger.close .menu-line:nth-child(3) {
+      transform: rotate(-45deg) translate(1rem, -1rem); }
     .menu-hamburger.show .menu-line {
       margin-bottom: 0.8rem; }
   nav .portrait-container, nav .links-container {

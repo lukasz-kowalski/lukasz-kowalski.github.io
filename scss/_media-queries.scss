@@ -12,9 +12,12 @@
       .menu-line {
         &:nth-child(2) {
           top: -3.5rem;
-          right: -1.25rem;
+          right: -1.15rem;
           width: 7rem;
           height: 7rem;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(1rem, -1rem); 
         }
       }
     }
