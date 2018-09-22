@@ -1,5 +1,5 @@
 const page404 = `
-  <section class="page404">
+  <div class="page404">
     404
-  </section>
+  </div>
 `;
