@@ -1,11 +1,21 @@
+const keycodes = {
+  space: 32,
+  enter: 13,
+  escape: 27
+};
+
 const showHeaders = () => {
+  const headers = document.querySelectorAll('.show');
+  for (let header of headers) {
+    header.classList.remove('show');
+  }
   if (window.location.pathname === '/') {
     const arr = [document.querySelector('.large-header'), document.querySelector('.small-header'), document.querySelector('.home-icons')];
     setTimeout(() => arr.forEach(header => header.classList.add('show'), 500));
   }
 };
 
-document.addEventListener("DOMContentLoaded", showHeaders);
+document.addEventListener('DOMContentLoaded', showHeaders);
 
 const hamburger = document.querySelector('.menu-hamburger');
 const nav = document.querySelector('nav');

@@ -11,7 +11,7 @@
 
 html {
   font-size: 10px;
-  color: $font-color;
+  color: $white;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $font-color;
+  color: $white;
 }
 
 img {
@@ -36,6 +36,10 @@ img {
 p {
   line-height: 1.5;
   font-size: 1.8rem;
+}
+
+span[aria-current=true] {
+  color: $primary-color;
 }
 
 .inline-link {
@@ -125,7 +129,7 @@ main {
     .work__project {
       .project__figure {
         position: relative;
-        border: 0.2rem solid $font-color;
+        border: 0.2rem solid $white;
 
         .caption {
           position: absolute;
@@ -134,7 +138,7 @@ main {
           @include center-text;
         }
         .caption-light {
-          background: rgba($font-color, 0.8);
+          background: rgba($white, 0.8);
           color: $bg-color;
         }
       }
@@ -144,9 +148,9 @@ main {
         @include display-flex(center, center);
         margin-top: 0.5rem;
         background: $bg-color;
-        color: $font-color;
+        color: $white;
         text-transform: uppercase;
-        border: 0.2rem solid $font-color;
+        border: 0.2rem solid $white;
         border-radius: 0 0 0.4rem 0.4rem;
         cursor: pointer;
         @include ease-out(1s);

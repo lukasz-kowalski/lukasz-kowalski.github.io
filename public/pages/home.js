@@ -1,6 +1,5 @@
 const homePage = `
   <div class="home">
-  <div class="overlay"></div>
     <h1 class="large-header">
       Lukasz <span class="highlighted-text">Kowalski</span></h1>
     <h2 class="small-header">Web Developer, <span class="highlighted-text">JavaScript programmer,</span> IT geek</h2>

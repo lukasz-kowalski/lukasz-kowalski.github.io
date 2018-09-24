@@ -1,10 +1,11 @@
 @mixin background-image {
   &.bg-home {
+    position: relative;
     background-image: $bg-img;
     background-size: cover;
     background-attachment: fixed;
 
-    &::after {
+    &::before {
       content: '';
       position: absolute;
       top: 0;

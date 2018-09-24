@@ -15,7 +15,7 @@
       You need to enable JavaScript to see this website.
     </noscript>
   <header>
-    <div class="menu-hamburger">
+    <div role="button" class="menu-hamburger" tabindex="0" aria-haspopup="true">
       <div class="menu-line"></div>
       <div class="menu-line"></div>
       <div class="menu-line"></div>
@@ -26,10 +26,10 @@
           <a href="/bio"><div class="menu-portrait"></div></a>
       </div>
       <ul class="links-container">
-        <li class="menu-link" id="/">Home</li>
-        <li class="menu-link" id="/bio">Bio</li>
-        <li class="menu-link" id="/work">My projects</li>
-        <li class="menu-link" id="/contact">Contact</li>
+        <li class="menu-item"><span href="/" class="menu-link" role="link" tabindex="0">Home</span></li>
+        <li class="menu-item"><span href="/bio" class="menu-link" role="link" tabindex="0">Bio</span></li>
+        <li class="menu-item"><span href="/work" class="menu-link" role="link" tabindex="0">My projects</span></li>
+        <li class="menu-item"><span href="/contact" class="menu-link" role="link" tabindex="0">Contact</span></li>
       </ul>
     </nav>
   </header>
@@ -42,7 +42,7 @@
   <script src="public/pages/work.js"></script>
   <script src="public/pages/contact.js"></script>
   <script src="public/pages/404.js"></script>
-  <script src="router.js"></script>
   <script src="public/js/main.js"></script>
+  <script src="router.js"></script>
 </body>
 </html>

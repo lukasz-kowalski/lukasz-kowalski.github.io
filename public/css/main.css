@@ -71,12 +71,14 @@ nav {
       font-size: 4rem;
       padding: 1rem;
       list-style-type: none;
-      opacity: 0; }
+      opacity: 0;
+      cursor: pointer; }
       nav .links-container .menu-item.show {
         opacity: 1;
         transition-delay: 1.1s; }
-      nav .links-container .menu-item .menu-link:hover {
-        transition: all 0.5s ease-out;
+    nav .links-container .menu-link {
+      transition: all 0.5s ease-out; }
+      nav .links-container .menu-link:hover {
         color: #DD4124; }
 
 * {
@@ -94,10 +96,11 @@ body {
   background: #333;
   overflow-x: hidden; }
   body.bg-home {
+    position: relative;
     background-image: url(/public/img/home-background.jpg);
     background-size: cover;
     background-attachment: fixed; }
-    body.bg-home::after {
+    body.bg-home::before {
       content: '';
       position: absolute;
       top: 0;
@@ -119,6 +122,9 @@ img {
 p {
   line-height: 1.5;
   font-size: 1.8rem; }
+
+span[aria-current=true] {
+  color: #DD4124; }
 
 .inline-link {
   color: #DD4124;
