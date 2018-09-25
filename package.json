@@ -2,9 +2,7 @@
   "name": "lukasz-kowalski-portfolio",
   "version": "1.0.0",
   "description": "Portfolio of Lukasz Kowalski",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "sass": "node-sass -w scss/ -o public/css/ --recursive",
     "server": "live-server --port=3000 --entry-file=index.html"
   },
