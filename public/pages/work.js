@@ -17,7 +17,7 @@ const workPage = `
         <a href="https://github.com/blstream/ShopMe_Frontend#quickstart" target="_blank">
           <figure class="project__figure">
             <img src="public/img/work/shopme.png" alt="pong game">
-            <figcaption class="caption caption-light">Classic Pong Game</figcaption>
+            <figcaption class="caption caption-light">ShopMe</figcaption>
           </figure>
         </a>
         <a href="https://github.com/blstream/ShopMe_Frontend" target="_blank" class="project-link">
