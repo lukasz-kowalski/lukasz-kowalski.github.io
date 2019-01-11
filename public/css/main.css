@@ -60,7 +60,7 @@ nav {
       border: 0.3rem solid #DD4124; }
   nav .links-container {
     transition: all 1s ease-out;
-    background: rgba(38, 38, 38, 0.8);
+    background: rgba(38, 38, 38, 0.95);
     height: 70vh;
     text-transform: uppercase;
     transform: translate(0, 100vh); }
