@@ -83,7 +83,7 @@ nav {
 
   .links-container {
     @include ease-out(1s);
-    background: rgba(darken($bg-color, 5), 0.8);
+    background: rgba(darken($bg-color, 5), 0.95);
     height: 70vh;
     text-transform: uppercase;
     transform: translate(0, 100vh);
