@@ -9,7 +9,7 @@
   "author": "Lukasz Kowalski",
   "license": "MIT",
   "dependencies": {
-    "live-server": "^1.2.0",
-    "node-sass": "^4.9.3"
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0"
   }
 }
